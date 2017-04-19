@@ -56,8 +56,8 @@
         if (!isExpanded) {
             [UIView animateWithDuration:0.4 animations:^{
                 self.expandView.frame=CGRectMake(0, self.view.frame.size.height-EXPAND_HEIGHT, self.expandView.frame.size.width, EXPAND_HEIGHT);
-                _upperView.frame=CGRectMake(0, self.horizontalView.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height-self.expandView.frame.size.height);
-                _horizontalView.frame=CGRectMake(self.horizontalView.frame.origin.x, self.horizontalView.frame.origin.y, 2, 80);
+                self.upperView.frame=CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-self.expandView.frame.size.height);
+                self.horizontalView.frame=CGRectMake(self.horizontalView.frame.origin.x, self.horizontalView.frame.origin.y, 2, 80);
             } completion:^(BOOL finished) {
                 [UIView animateWithDuration:0.4 animations:^{
                     self.horizontalView.frame=CGRectMake(10, self.horizontalView.frame.origin.y, self.expandView.frame.size.width-20, self.horizontalView.frame.size.height);
